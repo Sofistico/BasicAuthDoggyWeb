@@ -1,6 +1,6 @@
 namespace DoggyApi
 {
-    public class Program
+    public static class Program
     {
         public static void Main(string[] args)
         {
@@ -26,6 +26,7 @@ namespace DoggyApi
 
             app.UseAuthorization();
 
+            app.UseIdentityServer();
 
             app.MapControllers();
 
