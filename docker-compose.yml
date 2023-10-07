@@ -7,6 +7,8 @@ services:
   environment:
    - POSTGRES_USER=postgres
    - POSTGRES_PASSWORD=pas
+   - POSTGRES_DB_PORT=5432
+   - POSTGRES_DB_HOST=localhost
   ports:
    - '5432:5432'
   volumes:
@@ -14,3 +16,6 @@ services:
 volumes:
  postgres_db:
   driver: local
+networks:
+ postgres_db_network:
+  driver: bridge   
